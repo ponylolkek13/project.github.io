@@ -1,0 +1,231 @@
+/* Общие стили */
+
+body {
+    font-family: sans-serif; /* Основной шрифт */
+    margin: 0; /* Убираем отступы по умолчанию */
+    padding: 0;
+    background-color: #f0f0f0; /* Фоновый цвет */
+    color: #333; /* Основной цвет текста */
+}
+
+.container {
+    max-width: 1200px; /* Максимальная ширина контента */
+    margin: 0 auto; /* Центрируем контент по горизонтали */
+    padding: 20px; /* Отступы внутри контейнера */
+}
+
+h1, h2, h3 {
+    font-weight: bold; /* Жирное начертание заголовков */
+    color: #007bff; /* Цвет заголовков (синий) */
+}
+
+a {
+    color: #007bff; /* Цвет ссылок (синий) */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркиваем ссылки при наведении */
+}
+
+/* Стили для шапки сайта (header) */
+
+header {
+    background-color: #fff; /* Белый фон */
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px; /* Размер логотипа */
+    font-weight: bold;
+    color: #333;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav li {
+    margin-left: 20px;
+}
+
+/* Стили для главного содержимого (main) */
+
+main {
+    padding: 40px 0;
+}
+
+.hero {
+    text-align: center; /* Выравниваем текст по центру */
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.5; /* Межстрочный интервал */
+}
+
+/* Стили для сетки проектов */
+.portfolio .container {
+    max-width: 1000px; /* Уменьшаем максимальную ширину для этой страницы */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Создаем адаптивную сетку */
+    gap: 20px; /* Отступы между элементами сетки */
+}
+
+.project-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.project-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* Стили для подвала сайта (footer) */
+
+footer {
+    background-color: #333; /* Темный фон */
+    color: #fff; /* Белый текст */
+    padding: 20px 0;
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+footer a {
+    color: #fff; /* Белый цвет ссылок */
+}
+
+/* Адаптивные стили (media queries) - для мобильных устройств */
+
+@media (max-width: 100px) {
+    .container {
+        padding: 10px; /* Уменьшаем отступы на маленьких экранах */
+    }
+
+    header .container {
+        flex-direction: column; /* Перестраиваем элементы в колонку */
+        align-items: center; /* Выравниваем элементы по центру */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Перестраиваем пункты меню в колонку */
+        text-align: center; /* Выравниваем текст в пунктах меню по центру */
+    }
+
+    header nav li {
+        margin: 10px 0; /* Увеличиваем отступы между пунктами меню */
+    }
+
+    .hero h1 {
+        font-size: 28px; /* Уменьшаем размер заголовка */
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000; /* Белый фон */
+    color: #ffffff; /* Цвет текста */
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+    transition: box-shadow 0.3s ease; /* Добавляем плавный переход тени */
+}
+
+.button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Увеличиваем тень при наведении */
+}
+
+header .logo img {
+    max-width: 150px; /* Задаем максимальную ширину изображения */
+    height: auto; /* Автоматически вычисляем высоту, чтобы сохранить пропорции */
+    vertical-align: middle; /* Выравниваем изображение по вертикали */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 100% высоты viewport */
+}
+
+main {
+    flex: 1; /* Растягиваем main на всю доступную высоту */
+}
+
+footer {
+    /* Ваши стили для footer */
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Светлая тема (по умолчанию) */
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    background-color: #f0f0f0;
+}
+
+/*  Другие стили для светлой темы... */
+
+/* Темная тема */
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-theme header {
+    background-color: #555;
+}
+
+/* Другие стили для темной темы... */
+
+
+/* Стили для кнопок в светлой теме */
+.button {
+    background-color: #000000;
+    color: #fff;
+}
+/* Стили для кнопок в темной теме */
+body.dark-theme .button {
+    background-color: #2138ff; /* Другой цвет для темной темы */
+    color: #ffffff; /* Черный текст для темной темы */
+}
